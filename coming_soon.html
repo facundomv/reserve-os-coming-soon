@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve OS - Coming Soon</title>
+    <link rel="stylesheet" href="_styles.css">
+    <link rel="icon" href="assets/reserve_os_favicon.svg" type="image/x-icon">
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const formData = new FormData(document.querySelector('form'));
+
+            // Send form data to the server
+            fetch('send_email.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === 'success') {
+                    // Replace the container content with a thank you message
+                    const container = document.querySelector('.container');
+                    container.innerHTML = `
+                                <div class="logo">
+                            <img src="assets/reserve_os_favicon.svg" alt="Reserve OS Logo" />
+                        </div>
+                        <div class="thank-you-message">
+                            <p class="coming_soon" style="margin:0">Thank You!</p>
+                            <p>Your email has been sent successfully. We will keep you informed!</p>
+                        </div>
+                    `;
+                    // Apply the padding to the container
+                    container.style.padding = '100px 45px';
+                } else {
+                    alert('There was a problem sending your email. Please try again.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="logo">
+                <img src="assets/reserve_os_logo.svg" alt="Reserve OS Logo" />
+            </div>
+            <h1 class="title-font"><span>Engaging your customers, one reservation at a time.</span></h1>
+            <p class="coming_soon"><strong>COMING SOON</strong></p>
+            <div class="message_form">
+                <p class="text-font">Stay In The Know</p>
+                <form class="email_capture" onsubmit="submitForm(event)">
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <button class="submit" type="submit">SEND</button>
+                </form>
+            </div>
+        </div>
+        <div class="image-container"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,303 @@
+/* Import Stolzl Fonts */
+@font-face {
+    font-family: 'Stolzl';
+    src: url('assets/fonts/stozl/stolzl_regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('assets/fonts/stozl/stolzl_bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('assets/fonts/stozl/stolzl_light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('assets/fonts/stozl/stolzl_medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('assets/fonts/stozl/stolzl_book.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Stolzl';
+    src: url('assets/fonts/stozl/stolzl_thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Import Euclid Circular A Fonts */
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('assets/fonts/euclid/Euclid Circular A Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('assets/fonts/euclid/Euclid Circular A Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('assets/fonts/euclid/Euclid Circular A Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('assets/fonts/euclid/Euclid Circular A Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Euclid Circular A';
+    src: url('assets/fonts/euclid/Euclid Circular A SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+/* Apply default fonts globally */
+body {
+    font-family: 'Euclid Circular A', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Stolzl', sans-serif;
+}
+
+/* Additional utility classes for custom usage */
+.title-font {
+    font-family: 'Stolzl', sans-serif;
+    color:#363538;
+}
+
+.text-font {
+    font-family: 'Euclid Circular A', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color:#363538;
+}
+
+/* Specific font-weight utility classes */
+.font-bold {
+    font-weight: 700;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.font-thin {
+    font-weight: 100;
+}
+
+.font-book {
+    font-weight: 600;
+}
+
+body {
+    color:#363538;
+    margin: 0;
+    font-family: 'Euclid Circular A', sans-serif;
+    font-size:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: 
+    linear-gradient(117deg, rgba(228, 175, 111, 0.9) 0%, rgba(149, 181, 186, 0.9) 100%), 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)),  
+        url('assets/reserve_os_customer_background.webp') no-repeat center center/cover; /* Background image */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  
+        linear-gradient(117deg, rgba(228, 175, 111, 0.8) 0%, rgba(149, 181, 186, 0.8) 100%), 
+        linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.3)),
+        url('assets/reserve_os_customer_background.webp') no-repeat center center/cover; /* Background image */
+    filter: blur(5px); 
+    z-index: -1; 
+}
+
+
+.container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width:850px;
+    padding: 100px 0px 100px 40px;
+    position: relative;
+}
+.content {
+    max-width: 50%;
+}
+.content h1 {
+    font-size: 36px;
+    margin: 0;
+}
+.content h1 span {
+    color:#363538;
+    font-size: 24px;
+    display: block;
+    margin-top: 10px;
+}
+.content p {
+    margin: 20px 0;
+}
+.content input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80%;
+    margin-right: 10px;
+}
+.content button {
+    background-color: #E0F465;
+    border-radius:100px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    color:#363538;
+    font-weight: 700;
+    padding:10px 25px;
+    
+
+}
+
+.submit:hover{
+    transform: scale(1.05); 
+}
+.submit{
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.image-container {
+    border-radius: 15px;
+    width: 400px;
+    height: 400px;
+    background: 
+        url('assets/customer_image.webp') no-repeat center center; 
+    background-size: cover; /* Ensure the image covers the container */
+    background-color: #ccc;
+    display: block;
+    margin-top:-200px;
+    margin-right: -310px;
+}
+
+
+.logo{
+    width:65%;
+}
+.logo img {
+    width:100%;
+}
+.coming_soon{
+    background: linear-gradient(90deg, #E3AF6F 0%, #95B5BA 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for browsers that do not support background-clip */
+font-weight: 900;
+font-size:2rem;
+}
+
+.thank-you-message{
+    display: flex;
+    flex-direction: column;
+}
+.email_capture{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.message_form{
+    display: flex;
+    flex-direction: column;
+    margin-top:50px
+}
+
+@media (max-width: 1250px) {
+    .container{
+        max-width:80vw;
+        padding:100px 45px;
+    }
+
+    .image-container {
+        width: 400px;
+        height: 400px;
+        margin-top:0;
+        margin-right:0;
+    }
+  }
+
+  @media (max-width: 768px) { 
+    .container {
+        flex-direction: column-reverse;
+        max-height: 60vw;
+        padding:50px 40px;
+    }
+    .image-container {
+        display:none;
+    }
+    .content{
+        max-width:100%;
+    }
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:  
+        linear-gradient(117deg, rgba(228, 175, 111, 0.8) 0%, rgba(149, 181, 186, 0.5) 100%), 
+            url('assets/reserve_os_customer_background.webp') no-repeat center center/cover; /* Background image */ 
+        z-index: -1; 
+        filter: blur(0px); 
+    }
+  }
+
+  @media (max-width: 520px) {
+    .container {
+        flex-direction: column-reverse;
+        max-height: 80vh;
+        padding:40px 20px;
+    }
+}
