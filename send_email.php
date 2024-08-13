@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $to = "facundomv@gmail.com";
+    $to = "daniel@reserveos.com";
     $subject = "New Email Subscription from Rerserve Os";
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     $message = "New subscription from: " . $email;
